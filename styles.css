@@ -1,22 +1,23 @@
-/* Adjust 2006 milestone image position */
-.timeline-card[data-year="2006"] .card-img {
-			margin-top: 0;
-			height: 140px;
-			object-fit: cover;
-			object-position: top center;
-}
 @media (max-width: 700px) {
 	.timeline-card:first-child {
 		margin-left: 0;
 	}
 }
+/* Remove default body margin/padding */
+body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
 /* Intel-branded Hero Section */
 .hero {
 	background: linear-gradient(135deg, #0071c5 0%, #00aaff 100%);
 	color: #fff;
-	padding: 48px 0 32px 0;
+	padding: 48px 24px 32px 24px;
 	text-align: center;
 	position: relative;
+	box-sizing: border-box;
 }
 
 .hero-content {
@@ -62,7 +63,8 @@
 	touch-action: pan-x;               /* allow horizontal touch panning */
 	overscroll-behavior-x: contain;
 	background: #f4f8fb;
-	padding: 40px 0 24px 0;
+	padding: 40px 24px 24px 24px;
+	box-sizing: border-box;
 }
 
 .timeline-card {
@@ -81,7 +83,7 @@
 }
 
 .timeline-card:first-child {
-	margin-left: 24px;
+	margin-left: 0;
 }
 
 .timeline-card:hover {
@@ -90,30 +92,52 @@
 	z-index: 2;
 }
 
+/* Card image covers top 60% of card */
 .card-img {
 	width: 100%;
-	height: 140px;
+	height: 192px; /* 60% of 320px card height */
 	object-fit: cover;
 	border-top-left-radius: 18px;
 	border-top-right-radius: 18px;
 	margin-bottom: 0;
 }
 
+/* Card content covers bottom 40% of card, white background */
 .card-content {
-	padding: 20px 18px 16px 18px;
-	width: 100%;
-	text-align: left;
+	background: #fff;
+	padding: 28px 18px;
+	width: calc(100% - 36px); /* 18px left + 18px right padding */
+	margin: 0 auto;
+	text-align: center;
+	min-height: 128px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-bottom-left-radius: 18px;
+	border-bottom-right-radius: 18px;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 1;
 }
 
+/* Enlarge year */
 .card-content h2 {
 	color: #0071c5;
-	font-size: 1.3rem;
-	margin-bottom: 4px;
+	font-size: 2rem;
+	font-weight: 700;
+	margin-bottom: 8px;
 }
+/* Center and enlarge the event title */
+/* Event title centered and bold, fits white pane */
 .card-content h3 {
 	color: #222;
-	font-size: 1.1rem;
-	margin-bottom: 8px;
+	font-size: 1.3rem;
+	font-weight: bold;
+	margin: 0 auto;
+	text-align: center;
+	display: block;
+	height: auto;
 }
 .card-content p {
 	color: #444;
@@ -121,22 +145,34 @@
 	margin-bottom: 10px;
 }
 
+/* Remove old card-details style for bottom overlay */
 .card-details {
-	background: #e3f2fd;
-	color: #0071c5;
-	border-radius: 10px;
-	padding: 10px;
-	font-size: 0.98rem;
-	margin-top: 8px;
-	margin-top: 0;
-	object-position: top center;
-	max-height: 0;
-	transition: opacity 0.3s, max-height 0.3s;
-	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 113, 197, 0.92);
+	color: #fff;
+	padding: 24px 18px 16px 18px;
+	border-radius: 18px;
+	opacity: 0;
+	transition: opacity 0.3s;
+	pointer-events: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	box-sizing: border-box;
+	z-index: 10;
+	margin: 0;
 }
 .timeline-card:hover .card-details {
 	opacity: 1;
-	max-height: 100px;
+	pointer-events: auto;
 }
 
 /* Timeline Instructions */
