@@ -234,11 +234,11 @@ body {
 	.hero-content { padding: 0 8px; }
 
 	.timeline {
-		flex-direction: row;             /* override your previous column */
-		flex-wrap: nowrap;
+		flex-direction: column;          /* stack cards vertically on mobile */
+		align-items: center;             /* center cards horizontally */
 		gap: 16px;
 		padding: 24px 8px 8px 8px;
-		overflow-x: auto;                /* do NOT unset */
+		overflow-x: unset;
 	}
 
 	.timeline-card {
