@@ -3,21 +3,49 @@
 		margin-left: 0;
 	}
 }
+
+/* Intel Brand Variables */
+:root {
+	--intel-blue: #0071c5;
+	--intel-light-blue: #00aaff;
+	--intel-dark: #222;
+	--intel-gray: #444;
+	--intel-bg: #f4f8fb;
+	--font-family: 'Intel One', Arial, Helvetica, sans-serif;
+	--font-size-base: 1rem;
+	--font-size-lg: 2rem;
+	--font-size-xl: 2.5rem;
+	--font-size-h3: 1.3rem;
+	--font-size-subtitle: 1.2rem;
+	--font-weight-bold: 700;
+	--font-weight-normal: 400;
+	--border-radius: 18px;
+	--box-shadow: 0 4px 16px rgba(0, 113, 197, 0.10);
+	--box-shadow-hover: 0 8px 32px rgba(0, 113, 197, 0.18);
+	--section-padding: 48px 24px 32px 24px;
+	--card-width: 320px;
+	--card-img-height: 192px;
+}
 /* Remove default body margin/padding */
 body {
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden;
+	font-family: var(--font-family);
+	font-size: var(--font-size-base);
+	color: var(--intel-dark);
+	background: var(--intel-bg);
 }
 
 /* Intel-branded Hero Section */
 .hero {
-	background: linear-gradient(135deg, #0071c5 0%, #00aaff 100%);
+	background: linear-gradient(135deg, var(--intel-blue) 0%, var(--intel-light-blue) 100%);
 	color: #fff;
-	padding: 48px 24px 32px 24px;
+	padding: var(--section-padding);
 	text-align: center;
 	position: relative;
 	box-sizing: border-box;
+	font-family: var(--font-family);
 }
 
 .hero-content {
@@ -35,44 +63,46 @@ body {
 }
 
 .hero-title {
-	font-size: 2.5rem;
-	font-weight: 700;
+	font-size: var(--font-size-xl);
+	font-weight: var(--font-weight-bold);
 	margin-bottom: 12px;
 	letter-spacing: 1px;
+	font-family: var(--font-family);
 }
 
 .hero-subtitle {
-	font-size: 1.2rem;
-	font-weight: 400;
+	font-size: var(--font-size-subtitle);
+	font-weight: var(--font-weight-normal);
 	margin-bottom: 0;
 	line-height: 1.5;
+	font-family: var(--font-family);
 }
 
 /* Timeline: force a horizontal scroller at all widths */
 .timeline {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;                 /* never wrap to a new line */
+	flex-wrap: nowrap;
 	gap: 32px;
 	width: 100%;
-	max-width: 100vw;                  /* prevent self-expansion wider than viewport */
-	overflow-x: auto;                  /* enable horizontal scrolling */
+	max-width: 100vw;
+	overflow-x: auto;
 	overflow-y: hidden;
-	scroll-snap-type: x proximity;     /* less strict than mandatory */
-	-webkit-overflow-scrolling: touch; /* iOS momentum */
-	touch-action: pan-x;               /* allow horizontal touch panning */
+	scroll-snap-type: x proximity;
+	-webkit-overflow-scrolling: touch;
+	touch-action: pan-x;
 	overscroll-behavior-x: contain;
-	background: #f4f8fb;
+	background: var(--intel-bg);
 	padding: 40px 24px 24px 24px;
 	box-sizing: border-box;
 }
 
 .timeline-card {
 	background: #fff;
-	border-radius: 18px;
-	box-shadow: 0 4px 16px rgba(0, 113, 197, 0.10);
-	flex: 0 0 auto;                    /* do not shrink or grow */
-	width: 320px;                      /* fixed width -> guarantees overflow */
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow);
+	flex: 0 0 auto;
+	width: var(--card-width);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -80,6 +110,7 @@ body {
 	position: relative;
 	cursor: pointer;
 	scroll-snap-align: start;
+	font-family: var(--font-family);
 }
 
 .timeline-card:first-child {
@@ -88,17 +119,17 @@ body {
 
 .timeline-card:hover {
 	transform: translateY(-8px) scale(1.04);
-	box-shadow: 0 8px 32px rgba(0, 113, 197, 0.18);
+	box-shadow: var(--box-shadow-hover);
 	z-index: 2;
 }
 
 /* Card image covers top 60% of card */
 .card-img {
 	width: 100%;
-	height: 192px; /* 60% of 320px card height */
+	height: var(--card-img-height);
 	object-fit: cover;
-	border-top-left-radius: 18px;
-	border-top-right-radius: 18px;
+	border-top-left-radius: var(--border-radius);
+	border-top-right-radius: var(--border-radius);
 	margin-bottom: 0;
 }
 
@@ -123,26 +154,29 @@ body {
 
 /* Enlarge year */
 .card-content h2 {
-	color: #0071c5;
-	font-size: 2rem;
-	font-weight: 700;
+	color: var(--intel-blue);
+	font-size: var(--font-size-lg);
+	font-weight: var(--font-weight-bold);
 	margin-bottom: 8px;
+	font-family: var(--font-family);
 }
 /* Center and enlarge the event title */
 /* Event title centered and bold, fits white pane */
 .card-content h3 {
-	color: #222;
-	font-size: 1.3rem;
-	font-weight: bold;
+	color: var(--intel-dark);
+	font-size: var(--font-size-h3);
+	font-weight: var(--font-weight-bold);
 	margin: 0 auto;
 	text-align: center;
 	display: block;
 	height: auto;
+	font-family: var(--font-family);
 }
 .card-content p {
-	color: #444;
-	font-size: 1rem;
+	color: var(--intel-gray);
+	font-size: var(--font-size-base);
 	margin-bottom: 10px;
+	font-family: var(--font-family);
 }
 
 /* Remove old card-details style for bottom overlay */
@@ -157,7 +191,7 @@ body {
 	background: rgba(0, 113, 197, 0.92);
 	color: #fff;
 	padding: 24px 18px 16px 18px;
-	border-radius: 18px;
+	border-radius: var(--border-radius);
 	opacity: 0;
 	transition: opacity 0.3s;
 	pointer-events: none;
@@ -169,6 +203,7 @@ body {
 	box-sizing: border-box;
 	z-index: 10;
 	margin: 0;
+	font-family: var(--font-family);
 }
 .timeline-card:hover .card-details {
 	opacity: 1;
@@ -178,9 +213,10 @@ body {
 /* Timeline Instructions */
 .timeline-instructions {
 	text-align: center;
-	color: #0071c5;
-	font-size: 1rem;
+	color: var(--intel-blue);
+	font-size: var(--font-size-base);
 	margin: 18px 0 32px 0;
+	font-family: var(--font-family);
 }
 
 /* Timeline card container */
@@ -234,15 +270,15 @@ body {
 	.hero-content { padding: 0 8px; }
 
 	.timeline {
-		flex-direction: column;          /* stack cards vertically on mobile */
-		align-items: center;             /* center cards horizontally */
+		flex-direction: column;
+		align-items: center;
 		gap: 16px;
 		padding: 24px 8px 8px 8px;
 		overflow-x: unset;
 	}
 
 	.timeline-card {
-		width: 85vw;                     /* mobile-friendly card width */
+		width: 85vw;
 		margin: 0;
 	}
 

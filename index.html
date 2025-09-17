@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,13 +7,14 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- RTL and accessibility scripts will be placed at the end of body -->
 
   <!-- Header / Hero Section -->
   <header class="hero">
     <div class="hero-content">
-      <img class="intel-logo" src="images/intel-header-logo.svg" alt="Intel Logo" />
-      <h1 class="hero-title">Sustainability Through the Ages</h1>
-      <p class="hero-subtitle">
+  <img class="intel-logo" src="images/intel-header-logo.svg" alt="Intel Logo" role="img" aria-label="Intel Logo" />
+  <h1 class="hero-title" tabindex="0">Sustainability Through the Ages</h1>
+      <p class="hero-subtitle" tabindex="0">
         Explore Intel's journey through time, discovering how our commitment
         to innovation has shaped a more sustainable future for technology 
         and our planet.
@@ -22,84 +23,114 @@
   </header>
 
   <!-- Timeline Cards Section -->
-  <section class="timeline">
+  <section class="timeline" aria-label="Intel Sustainability Timeline">
     <div class="timeline-card" data-year="1968">
-      <img src="images/1.jpg" alt="Intel Founded" class="card-img" />
-      <div class="card-content">
+  <img src="images/1.jpg" alt="Intel Founded" class="card-img" role="img" aria-label="Intel Founded" />
+  <div class="card-content" tabindex="0">
         <h2>1968</h2>
         <h3 style="text-align:center;font-weight:bold;">Intel Founded</h3>
       </div>
-      <div class="card-details">Robert Noyce and Gordon Moore rename NM Electronics to Intel Corporation, laying the foundation for decades of technological innovation. Intel begins its journey toward innovation and sustainability.</div>
+  <div class="card-details" tabindex="0">Robert Noyce and Gordon Moore rename NM Electronics to Intel Corporation, laying the foundation for decades of technological innovation. Intel begins its journey toward innovation and sustainability.</div>
     </div>
     <div class="timeline-card" data-year="1971">
-      <img src="images/2.jpg" alt="First Microprocessor" class="card-img" />
-      <div class="card-content">
+  <img src="images/2.jpg" alt="First Microprocessor" class="card-img" role="img" aria-label="First Microprocessor" />
+  <div class="card-content" tabindex="0">
         <h2>1971</h2>
         <h3 style="text-align:center;font-weight:bold;">First Microprocessor</h3>
       </div>
-      <div class="card-details">Intel debuts the 4004, the world's first commercial microprocessor, igniting the microprocessor revolution and propelling the future of computing devices. The 4004 sets the stage for energy-efficient computing.</div>
+  <div class="card-details" tabindex="0">Intel debuts the 4004, the world's first commercial microprocessor, igniting the microprocessor revolution and propelling the future of computing devices. The 4004 sets the stage for energy-efficient computing.</div>
     </div>
     <div class="timeline-card" data-year="1978">
-      <img src="images/3.jpg" alt="8086 Processor" class="card-img" />
-      <div class="card-content">
+  <img src="images/3.jpg" alt="8086 Processor" class="card-img" role="img" aria-label="8086 Processor" />
+  <div class="card-content" tabindex="0">
         <h2>1978</h2>
         <h3 style="text-align:center;font-weight:bold;">8086 Processor</h3>
       </div>
-      <div class="card-details">Launch of the 8086 processor, establishing the x86 architecture that drives countless PCs and servers in the modern era. x86 architecture enables scalable, sustainable computing.</div>
+  <div class="card-details" tabindex="0">Launch of the 8086 processor, establishing the x86 architecture that drives countless PCs and servers in the modern era. x86 architecture enables scalable, sustainable computing.</div>
     </div>
     <div class="timeline-card" data-year="1985">
-      <img src="images/4.jpg" alt="386 Processor" class="card-img" />
-      <div class="card-content">
+  <img src="images/4.jpg" alt="386 Processor" class="card-img" role="img" aria-label="386 Processor" />
+  <div class="card-content" tabindex="0">
         <h2>1985</h2>
         <h3 style="text-align:center;font-weight:bold;">386 Processor</h3>
       </div>
-      <div class="card-details">Intel introduces the 386 processor with 32-bit architecture, ushering in a new era of performance and multitasking for personal computers. 32-bit architecture improves efficiency and sustainability.</div>
+  <div class="card-details" tabindex="0">Intel introduces the 386 processor with 32-bit architecture, ushering in a new era of performance and multitasking for personal computers. 32-bit architecture improves efficiency and sustainability.</div>
     </div>
     <div class="timeline-card" data-year="2006">
-      <img src="images/5.jpg" alt="Peak GHG Emissions" class="card-img" />
-      <div class="card-content">
+  <img src="images/5.jpg" alt="Peak GHG Emissions" class="card-img" role="img" aria-label="Peak GHG Emissions" />
+  <div class="card-content" tabindex="0">
         <h2>2006</h2>
         <h3 style="text-align:center;font-weight:bold;">Peak GHG Emissions</h3>
       </div>
-      <div class="card-details">This year marks Intel's highest annual greenhouse gas emissions for operations. Over subsequent years, Intel invests heavily in chemical abatement, renewable energy, and energy-efficient manufacturing to reverse this trend. Intel begins aggressive sustainability initiatives.</div>
+  <div class="card-details" tabindex="0">This year marks Intel's highest annual greenhouse gas emissions for operations. Over subsequent years, Intel invests heavily in chemical abatement, renewable energy, and energy-efficient manufacturing to reverse this trend. Intel begins aggressive sustainability initiatives.</div>
     </div>
     <div class="timeline-card" data-year="2020">
-      <img src="images/6.jpg" alt="RISE Strategy" class="card-img" />
-      <div class="card-content">
+  <img src="images/6.jpg" alt="RISE Strategy" class="card-img" role="img" aria-label="RISE Strategy" />
+  <div class="card-content" tabindex="0">
         <h2>2020</h2>
         <h3 style="text-align:center;font-weight:bold;">RISE Strategy</h3>
       </div>
-      <div class="card-details">Intel launches its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy and 2030 goals, aiming to drive industry-wide progress on climate action, water stewardship, and waste reduction. RISE strategy sets ambitious sustainability goals.</div>
+  <div class="card-details" tabindex="0">Intel launches its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy and 2030 goals, aiming to drive industry-wide progress on climate action, water stewardship, and waste reduction. RISE strategy sets ambitious sustainability goals.</div>
     </div>
     <div class="timeline-card" data-year="2022">
-      <img src="images/7.jpg" alt="Net-Zero By 2040" class="card-img" />
-      <div class="card-content">
+  <img src="images/7.jpg" alt="Net-Zero By 2040" class="card-img" role="img" aria-label="Net-Zero By 2040" />
+  <div class="card-content" tabindex="0">
         <h2>2022</h2>
         <h3 style="text-align:center;font-weight:bold;">Net-Zero By 2040</h3>
       </div>
-      <div class="card-details">Intel announces its commitment to achieve net-zero greenhouse gas emissions (Scope 1 and 2) across its global operations by 2040, building on years of environmental initiatives. Net-zero pledge accelerates environmental progress.</div>
+  <div class="card-details" tabindex="0">Intel announces its commitment to achieve net-zero greenhouse gas emissions (Scope 1 and 2) across its global operations by 2040, building on years of environmental initiatives. Net-zero pledge accelerates environmental progress.</div>
     </div>
     <div class="timeline-card" data-year="2023">
-      <img src="images/8.jpg" alt="Renewable Electricity" class="card-img" />
-      <div class="card-content">
+  <img src="images/8.jpg" alt="Renewable Electricity" class="card-img" role="img" aria-label="Renewable Electricity" />
+  <div class="card-content" tabindex="0">
         <h2>2023</h2>
         <h3 style="text-align:center;font-weight:bold;">Renewable Electricity</h3>
       </div>
-      <div class="card-details">The company achieves 99% renewable electricity usage worldwide, helping to drastically lower carbon emissions and driving progress toward Intel's long-term sustainability goals. 99% renewable electricity milestone reached.</div>
+  <div class="card-details" tabindex="0">The company achieves 99% renewable electricity usage worldwide, helping to drastically lower carbon emissions and driving progress toward Intel's long-term sustainability goals. 99% renewable electricity milestone reached.</div>
     </div>
     <div class="timeline-card" data-year="2024">
-      <img src="images/9.jpg" alt="Sustainability Summit" class="card-img" />
-      <div class="card-content">
+  <img src="images/9.jpg" alt="Sustainability Summit" class="card-img" role="img" aria-label="Sustainability Summit" />
+  <div class="card-content" tabindex="0">
         <h2>2024</h2>
         <h3 style="text-align:center;font-weight:bold;">Sustainability Summit</h3>
       </div>
-      <div class="card-details">Intel hosts its first Sustainability Summit, uniting suppliers, government officials, and industry leaders to collaborate on next-generation sustainable semiconductor manufacturing. Summit drives collaboration for a sustainable future.</div>
+  <div class="card-details" tabindex="0">Intel hosts its first Sustainability Summit, uniting suppliers, government officials, and industry leaders to collaborate on next-generation sustainable semiconductor manufacturing. Summit drives collaboration for a sustainable future.</div>
     </div>
   </section>
-  <p class="timeline-instructions">Scroll to view timeline | Hover over cards to learn more!</p>
+  <p class="timeline-instructions" tabindex="0">Scroll to view timeline | Hover over cards to learn more!</p>
   </section>
 
+  <!-- Newsletter Subscription Form -->
+  <footer style="background: var(--intel-bg); padding: 32px 0 16px 0; text-align: center;">
+    <form aria-label="Sustainability Newsletter Subscription" style="max-width: 400px; margin: 0 auto;" autocomplete="off">
+      <h2 style="color: var(--intel-blue); font-size: 1.3rem; font-family: var(--font-family);">Sign up for our Sustainability Newsletter</h2>
+      <label for="newsletter-email" style="display:block; margin-bottom:8px; font-size:1rem; color:var(--intel-dark); font-family:var(--font-family);">Email address <span aria-hidden="true" style="color:red;">*</span></label>
+      <input type="email" id="newsletter-email" name="email" required aria-required="true" aria-label="Email address" style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;font-size:1rem;margin-bottom:12px;" />
+      <button type="submit" style="background:var(--intel-blue);color:#fff;padding:10px 24px;border:none;border-radius:8px;font-size:1rem;cursor:pointer;font-family:var(--font-family);">Subscribe</button>
+      <p style="font-size:0.9rem;color:var(--intel-gray);margin-top:12px;">We respect your privacy. Unsubscribe anytime.</p>
+    </form>
+  </footer>
+
   <script>
+    // Detect RTL languages and set dir attribute
+    (function() {
+      const rtlLangs = ['ar', 'he', 'fa', 'ur'];
+      const userLang = navigator.language || navigator.userLanguage;
+      if (rtlLangs.some(l => userLang.startsWith(l))) {
+        document.documentElement.setAttribute('dir', 'rtl');
+      }
+    })();
+    // Newsletter form basic accessibility feedback
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('newsletter-email').value;
+      if (!email) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+      alert('Thank you for subscribing!');
+      this.reset();
+    });
   </script>
 </body>
 </html>
